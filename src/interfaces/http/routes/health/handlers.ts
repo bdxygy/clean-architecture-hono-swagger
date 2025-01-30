@@ -25,6 +25,6 @@ export const healthHandleGet: AppRouteHandler<HealthRouteGetType> = (c) => {
 
   return c.json(
     ResponseDTOSchema(HealthDTOSchemaResponse).parse(response),
-    200
+    200,
   );
 };

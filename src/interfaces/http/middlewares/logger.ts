@@ -8,5 +8,5 @@ export const loggerMIddleware = createMiddleware<ApplicationVariableBindings>(
     const logger = createLogger(c.var.env.LOG_LEVEL);
     c.set("logger", logger);
     await next();
-  }
+  },
 );

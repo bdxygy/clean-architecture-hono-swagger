@@ -6,5 +6,5 @@ export const envMiddleware = createMiddleware<ApplicationVariableBindings>(
   async (c, next) => {
     c.set("env", env);
     await next();
-  }
+  },
 );
