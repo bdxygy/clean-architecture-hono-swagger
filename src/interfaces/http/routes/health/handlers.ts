@@ -2,12 +2,13 @@ import {
   HealthDTOSchemaResponse,
   type HealthDTOResponse,
 } from "~/domains/dtos/health";
-import type { HealthRouteGetType } from "./routes";
-import type { AppRouteHandler } from "~/interfaces/http/app";
+import type { AppRouteHandler } from "~/interfaces/http/types";
 import {
   ResponseDTOSchema,
   type ResponseDTO,
 } from "~/domains/key-values/response";
+
+import type { HealthRouteGetType } from "./routes";
 
 export const healthHandleGet: AppRouteHandler<HealthRouteGetType> = (c) => {
   const data: HealthDTOResponse = {

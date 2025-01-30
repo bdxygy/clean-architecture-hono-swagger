@@ -1,4 +1,4 @@
-export const STATUS_CODE = {
+export const STATUS_CODE: Record<string, number> = {
   OK: 200,
   CREATED: 201,
   BAD_REQUEST: 400,
