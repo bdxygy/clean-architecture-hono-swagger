@@ -1,30 +1,35 @@
 import {
   HealthDTOSchemaResponse,
   type HealthDTOResponse,
-} from "~/domains/dtos/health";
-import type { AppRouteHandler } from "~/interfaces/http/types";
+} from '~/domains/dtos/health';
+import type { AppRouteHandler } from '~/interfaces/http/types';
 import {
   ResponseDTOSchema,
   type ResponseDTO,
-} from "~/domains/key-values/response";
+} from '~/domains/key-values/response';
 
-import type { HealthRouteGetType } from "./routes";
+import type { HealthRouteGetType } from './routes';
+import { logging } from '~/infrastructures/logger';
 
 export const healthHandleGet: AppRouteHandler<HealthRouteGetType> = (c) => {
   const data: HealthDTOResponse = {
-    status: "OK",
+    status: 'OK',
   };
 
   const response: ResponseDTO = {
     data,
-    message: "The health service OK",
+    message: 'The health service OK',
     error: false,
   };
 
-  c.var.logger.info({ response, path: c.req.path });
+  logging(c.var.logger, 'info', {
+    type: '<== RESPONSE',
+    path: c.req.path,
+    value: response,
+  });
 
   return c.json(
     ResponseDTOSchema(HealthDTOSchemaResponse).parse(response),
-    200,
+    200
   );
 };
