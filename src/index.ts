@@ -1,5 +1,5 @@
-import { env } from "~/helpers/env";
-import app from "./interfaces/http";
+import { env } from '~/helpers/env';
+import app from './interfaces/http';
 
 const server = Bun.serve({
   port: env.PORT,
