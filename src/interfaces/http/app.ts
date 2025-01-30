@@ -1,33 +1,15 @@
-import {
-  OpenAPIHono,
-  type RouteConfig,
-  type RouteHandler,
-} from "@hono/zod-openapi";
+import { OpenAPIHono } from "@hono/zod-openapi";
+
 import { createSwaggerUI } from "~/interfaces/docs";
-import { env, type EnvType } from "~/helpers/env";
-import type { logger } from "~/infrastructures/logger";
-import { loggerMIddleware } from "./middlewares/logger";
-import { envMiddleware } from "./middlewares/env";
-import { ZodError } from "zod";
+import { env } from "~/helpers/env";
 import {
   ResponseDTOSchema,
   type ResponseDTO,
 } from "~/domains/key-values/response";
 
-export type ApplicationVariableBindings = {
-  Variables: {
-    env: EnvType;
-    logger: logger;
-  };
-  Bindings: Record<string, string>;
-};
-
-export type Application = OpenAPIHono<ApplicationVariableBindings>;
-
-export type AppRouteHandler<R extends RouteConfig> = RouteHandler<
-  R,
-  ApplicationVariableBindings
->;
+import { loggerMIddleware } from "./middlewares/logger";
+import { envMiddleware } from "./middlewares/env";
+import type { Application } from "./types";
 
 export const createRouter = (): Application => {
   return new OpenAPIHono({
