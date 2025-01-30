@@ -3,6 +3,6 @@
  * @type {import('lint-staged').Configuration}
  */
 export default {
-  "./*.js": "prettier --write",
+  "./**/*.{js,ts}": "prettier --write",
   "./src/**/*.ts": "bunx eslint --fix",
 };
