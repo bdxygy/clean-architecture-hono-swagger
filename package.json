@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "bun --watch src/index.ts",
     "build": "bun build src/index.ts",
+    "db:generate": "bun run --bun drizzle-kit generate --config=src/infrastructures/database/config.ts",
     "prepare": "husky"
   },
   "devDependencies": {
