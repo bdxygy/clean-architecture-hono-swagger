@@ -9,4 +9,4 @@ serve({
   fetch: app.fetch,
 });
 
-console.log(`Server is running at http://${env.HOST}:${env.PORT}`);
+console.log(`Server is running at http://${env.HOST}:${env.PORT} !`);
