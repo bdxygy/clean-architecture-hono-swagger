@@ -3,25 +3,26 @@
   "module": "./src/index.ts",
   "type": "module",
   "scripts": {
-    "dev": "bun --watch src/index.ts",
-    "build": "bun build src/index.ts",
-    "db:generate": "bun run --bun drizzle-kit generate --config=src/infrastructures/database/config.ts",
+    "dev": "tsx --watch src/index.ts",
+    "build": "tsc",
+    "db:generate": "npx drizzle-kit generate --config=src/infrastructures/database/config.ts",
     "prepare": "husky"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.6.1",
     "@commitlint/config-conventional": "^19.6.0",
     "@eslint/eslintrc": "^3.2.0",
-    "@types/bun": "latest",
+    "@types/node": "latest",
     "cz-conventional-changelog": "^3.3.0",
-    "drizzle-kit": "^0.30.4",
     "eslint": "^9.19.0",
     "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-prettier": "^5.2.3",
     "globals": "^15.14.0",
+    "drizzle-kit": "^0.30.4",
     "husky": "^9.1.7",
     "lint-staged": "^15.4.3",
     "prettier": "^3.4.2",
+    "tsup": "^8.3.6",
     "tsx": "^4.19.2",
     "typescript-eslint": "^8.22.0"
   },
@@ -29,6 +30,7 @@
     "typescript": "^5.0.0"
   },
   "dependencies": {
+    "@hono/node-server": "^1.13.7",
     "@hono/swagger-ui": "^0.5.0",
     "@hono/zod-openapi": "^0.18.3",
     "@hono/zod-validator": "^0.4.2",

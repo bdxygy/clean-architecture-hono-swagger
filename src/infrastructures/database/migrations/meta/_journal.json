@@ -5,15 +5,50 @@
     {
       "idx": 0,
       "version": "5",
-      "when": 1738285112231,
-      "tag": "20250131005832_init",
+      "when": 1738399984917,
+      "tag": "20250201085304_init_users_table",
       "breakpoints": true
     },
     {
       "idx": 1,
       "version": "5",
-      "when": 1738285170110,
-      "tag": "20250131005930_id_with_pk",
+      "when": 1738412706816,
+      "tag": "20250201122506_init_topics_table",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1738414417183,
+      "tag": "20250201125337_init_titles_table",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1738414893881,
+      "tag": "20250201130133_init_posts_table",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1738415195455,
+      "tag": "20250201130635_init_targets_table",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "5",
+      "when": 1738415429864,
+      "tag": "20250201131029_init_posts_targets_table",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "5",
+      "when": 1738415604458,
+      "tag": "20250201131324_alter_meta_table",
       "breakpoints": true
     }
   ]
